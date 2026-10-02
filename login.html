@@ -1,1 +1,57 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AxlynDate - Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a1931;color:#94a3b8;font-family:'Inter',sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px}
+.box{background:#112240;border:1px solid rgba(148,163,184,.14);border-radius:20px;padding:28px 22px;max-width:380px;width:100%;text-align:center}
+.logo{width:68px;height:68px;border:1.5px solid #c9a896;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#e8b4a0;font-family:'Playfair Display',serif;font-size:28px}
+.sub{font-size:8px;letter-spacing:4px;color:#8a9ab3;margin-bottom:14px}
+h1{font-family:'Playfair Display',serif;font-size:24px;color:#f0e6d8;margin-bottom:6px}
+p{font-size:12px;color:#8aa0b8;margin-bottom:18px;line-height:1.5}
+input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(148,163,184,.2);background:#0d1d3a;color:#fff;margin:7px 0;font-size:13px;outline:none}
+.btn{width:100%;padding:12px;border:none;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;margin-top:10px}
+.btn-primary{background:linear-gradient(90deg,#e9c1a8,#e8b08a);color:#2c1c12}
+.btn-sec{background:transparent;border:1px solid rgba(148,163,184,.25);color:#cbd5e1;margin-top:8px}
+.msg{margin-top:12px;font-size:11px;min-height:16px;color:#7fda8a}
+a{color:#e8b4a0;text-decoration:none;font-size:11px}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="logo">AX</div>
+<div class="sub">LUXURY • REAL • SAFE</div>
+<h1>Welcome to AxlynDate</h1>
+<p>Premium dating — Sign up to find real love</p>
+<input id="email" type="email" placeholder="Email address">
+<input id="password" type="password" placeholder="Password (6+ characters)">
+<button class="btn btn-primary" onclick="signup()">Create Account — Free</button>
+<button class="btn btn-sec" onclick="login()">I have an account — Login</button>
+<div id="msg" class="msg"></div>
+<p style="margin-top:14px"><a href="index.html">← Back to Home</a></p>
+</div>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyDummy-Replace-With-Yours",
+  authDomain: "axlyndate.firebaseapp.com",
+  projectId: "axlyndate",
+  appId: "1:123:web:abc"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const msg = document.getElementById('msg');
+window.signup = async () => {
+  try{await createUserWithEmailAndPassword(auth,email.value,password.value);msg.textContent="✅ Account created!";}catch(e){msg.textContent="❌ "+e.message;}
+}
+window.login = async () => {
+  try{await signInWithEmailAndPassword(auth,email.value,password.value);msg.textContent="✅ Login success!";setTimeout(()=>location.href="index.html",1000);}catch(e){msg.textContent="❌ "+e.message;}
+}
+</script>
+</body>
+</html>
