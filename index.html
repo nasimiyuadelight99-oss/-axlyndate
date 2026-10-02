@@ -1,53 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AxlynDate - Luxury • Real • Safe</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#021931;color:#e8e8e8;font-family:Inter,sans-serif;text-align:center}
-.hsh{max-width:800px;margin:0 auto;padding:20px 10px 40px}
-.lsgb{width:90px;height:90px;border:1.5px solid #d4a373;border-radius:18px;display:flex;align-items:center;justify-content:center;margin:24px auto 10px;background:rgba(255,255,255,.04);font-family:'Playfair Display',serif;font-size:38px;color:#d4a373;font-weight:700;box-shadow:0 0 30px rgba(212,163,115,.15)}
-.fuh{letter-spacing:5px;font-size:11px;color:#d4a373;margin-bottom:10px;text-transform:uppercase}
-h1{font-family:'Playfair Display',serif;font-size:36px;margin:0;line-height:1.1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a1931;color:#94a3b8;font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:30px 16px 80px;text-align:center}
+.logo{width:88px;height:88px;border:1.5px solid #c9a896;border-radius:20px;display:flex;align-items:center;justify-content:center;margin:30px auto 12px;color:#e8b4a0;font-family:'Playfair Display',serif;font-size:34px;background:rgba(255,255,255,0.02);letter-spacing:1px}
+.sublogo{font-size:9px;letter-spacing:4.5px;color:#8a9ab3;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+h1{font-family:'Playfair Display',serif;font-size:30px;color:#f0e6d8;font-weight:700;letter-spacing:.3px}
 h1 span{color:#e8b4a0}
-.desc{max-width:550px;margin:14px auto 24px;color:#e8b2c1;font-size:14.5px;line-height:1.6;opacity:.9}
-.btn{display:inline-block;background:linear-gradient(30deg,#8b4a0,#d4a373);color:#0a1931;padding:13px 28px;border-radius:12px;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:.5px}
-.card{background:#112240;border:1px solid rgba(212,163,115,.18);border-radius:14px;padding:22px 18px;margin:24px auto;max-width:700px;text-align:left}
-.card h2{color:#d4a373;font-size:16px;margin:0 0 10px;font-family:'Playfair Display',serif}
-.card p{color:#e8b2c1;font-size:13.5px;line-height:1.6;margin:0}
-.center{max-width:700px;margin:0 auto}
-.price-grid{display:grid;gap:12px;margin:16px 0}
-.price{border:1px solid rgba(212,163,115,.25);border-radius:12px;padding:16px;background:rgba(255,255,255,.03)}
-.price b{color:#d4a373;font-size:20px}
-.price span{font-size:12px;color:#e8b2c1}
-.small{font-size:11px;color:#8a9bb5;margin-top:20px}
-a{color:#d4a373}
+.tag{max-width:560px;margin:14px auto 22px;font-size:13.5px;line-height:1.7;color:#8aa0b8;font-weight:400}
+.btn{display:inline-block;background:linear-gradient(90deg,#e9c1a8,#e8b08a);color:#2c1c12;padding:12px 26px;border-radius:24px;font-weight:700;font-size:12.5px;text-decoration:none;margin-bottom:26px;box-shadow:0 6px 24px rgba(232,176,138,.28);border:none;cursor:pointer}
+.card{background:#112240;border:1px solid rgba(148,163,184,.14);border-radius:18px;padding:20px 18px;margin:18px auto;text-align:center}
+.card h2{color:#e8dcc8;font-size:13.5px;font-weight:700;margin-bottom:10px}
+.card p{font-size:12.8px;line-height:1.75;color:#8ea3ba;margin:0 auto;max-width:620px}
+.check{margin-top:12px;font-size:10.5px;color:#6c7f9a;letter-spacing:.2px}
+.premium{text-align:left}
+.premium h2{text-align:center;margin-bottom:16px}
+.premium ul{list-style:none;padding:0 4px}
+.premium li{font-size:13px;color:#8ea3ba;margin:10px 0}
+.premium li::before{content:"• ";margin-right:2px}
+.divider{height:1px;background:rgba(148,163,184,.12);margin:18px 0 14px}
+.pricing-title{text-align:center;color:#e8b4a0;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px}
+.plan{border:1px solid rgba(148,163,184,.22);border-radius:12px;padding:12px;text-align:center;font-size:12.8px;color:#cbd5e1;background:#0d1d3a;margin:9px 0;font-weight:500}
+.plan.pop{background:linear-gradient(90deg,#e9c1a8,#e8b08a);color:#2c1c12;font-weight:800;border:none;box-shadow:0 4px 18px rgba(232,176,138,.25)}
+.foot{margin-top:10px;text-align:center;font-size:9.5px;color:#5a6e8a}
+.copy{margin-top:28px;font-size:9px;color:#3f5068;line-height:1.6}
+.copy a{color:#8a9ab3;text-decoration:underline}
 </style>
 </head>
 <body>
-<div class="hsh">
-<div class="lsgb">A</div>
-<div class="fuh">AXLYNDATE</div>
-<h1>Luxury • Real • <span>Safe</span></h1>
-<p class="desc">Elite verified community for genuine connections. No fakes. No bots. 100% real profiles, luxury experience, and privacy-first safety.</p>
-<a class="btn" href="#">JOIN THE WAITLIST</a>
+<div class="wrap">
+<div class="logo">AX</div>
+<div class="sublogo">LUXURY • REAL • SAFE</div>
+<h1>AxlynDate</h1>
+<p class="tag">Premium dating where real connections begin. No fake profiles. No games. Just authentic people seeking meaningful relationships — in luxury style.</p>
+
+<button class="btn" onclick="let e=prompt('Enter your email for early access:'); if(e){alert('Thanks! '+e+' added to AxlynDate VIP waitlist.');}">Download on Play Store - Coming Soon</button>
 
 <div class="card">
-<h2>✨ Why AxlynDate?</h2>
-<p>We verify every member manually. Luxury matching for ambitious professionals who value quality over quantity. Secure chat, private photos, and discreet luxury dating.</p>
+<h2>Why AxlynDate is Different?</h2>
+<p>Our AX monogram represents the bond between two people — intertwined, elegant, forever. Navy for trust, Rose Gold for love. AxlynDate is crafted for serious, luxury-minded singles worldwide — where elegance meets authenticity and real connections become timeless.</p>
+<div class="check">✓ Safe & Verified ✓ Premium Only ✓ Real Love</div>
 </div>
 
-<div class="center">
-<div class="price-grid">
-<div class="price"><b>Free</b><br><span>Create profile • Browse • Limited likes</span></div>
-<div class="price"><b>$29 / month</b><br><span>Premium • Unlimited chat • See who liked you • Verified badge</span></div>
-<div class="price"><b>$99 / year</b><br><span>Luxury VIP • Priority • Private concierge support</span></div>
+<div class="card premium">
+<h2>💎 What Premium Should Unlock:</h2>
+<ul>
+<li>See who liked you</li>
+<li>Unlimited messages</li>
+<li>Video calls</li>
+<li>VIP badge + top search</li>
+<li>No ads</li>
+</ul>
+<div class="divider"></div>
+<div class="pricing-title">ELITE MEMBERSHIP — Worldwide Access</div>
+<div class="plan">Weekly Pass — $19 / week</div>
+<div class="plan pop">Monthly Elite — $49 / month ★ Most Popular</div>
+<div class="plan">Yearly Royal — $299 / year — 60% Savings</div>
+<div class="foot">Secure • Cancel anytime • Supporting a safe, verified community</div>
 </div>
-<p class="small">By joining you agree to our <a href="privacy.html">Privacy Policy</a> • 18+ Only • Made with luxury in mind</p>
-</div>
+
+<div class="copy">© 2026 AxlynDate • Worldwide Luxury Dating • axlyndate.web.app<br>By joining you agree to our <a href="privacy.html">Privacy Policy</a></div>
 
 </div>
 </body>
