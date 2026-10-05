@@ -1,117 +1,34 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AxlynDate - Luxury Dating</title>
+<title>AxlynDate</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui;background:#0a1931;color:#fff;min-height:100vh}
-header{display:flex;justify-content:space-between;padding:14px 16px;position:absolute;top:0;left:0;right:0;z-index:5}
-.logo{width:38px;height:38px;border:1.5px solid #e6c9a8;color:#e6c9a8;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:rgba(10,25,49,.6);backdrop-filter:blur(6px)}
-.topbtn{padding:7px 14px;border-radius:20px;border:none;font-weight:700;font-size:11px}
-.gold{background:#e6c9a8;color:#0a1931}.dark{background:rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15)}
-.hero{position:relative;height:62vh;background:url('https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=900') center 30%/cover no-repeat;display:flex;align-items:flex-end;justify-content:center}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(10,25,49,.15) 0%, rgba(10,25,49,.25) 45%, rgba(10,25,49,.92) 85%, #0a1931 100%)}
-.heroText{position:relative;z-index:2;text-align:center;padding:20px 16px 24px;width:100%}
-.badge{font-size:9px;letter-spacing:2px;opacity:.7;border:1px solid #e6c9a860;padding:5px 12px;border-radius:20px;display:inline-block;margin-bottom:10px}
-.heroText h1{font-size:28px;line-height:1.1}.heroText h1 span{color:#e6c9a8}.heroText p{font-size:12px;opacity:.75;margin:8px auto;max-width:310px;line-height:1.4}
-.cardBox{background:#132845;border:1px solid #ffffff0f;border-radius:18px;padding:16px;margin:12px 16px}
-.payBtn{width:100%;padding:13px;border-radius:26px;border:none;font-weight:800;margin-top:8px;font-size:13px}
-.popular{background:#e6c9a8;color:#0a1931}.outline{background:#1a3253;color:#fff;border:1px solid #ffffff15}
-#loginModal,#payModal,#app{position:fixed;inset:0;display:none;z-index:99}
-#loginModal.show,#payModal.show,#app.show{display:flex}
-#loginModal,#payModal{background:rgba(0,0,0,.8);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:16px}
-.modal{background:#132845;border:1px solid #ffffff18;border-radius:22px;padding:22px;width:100%;max-width:370px}
-.modal input{width:100%;padding:12px;border-radius:12px;background:#1a3253;border:1px solid #ffffff12;color:#fff;margin-bottom:10px}
-#app{flex-direction:column;background:#0a1931;overflow:auto}
-.appTop{display:flex;justify-content:space-around;padding:12px;border-bottom:1px solid #ffffff10}
-.appTop button{background:none;border:none;color:#ffffff60;font-size:13px}.appTop button.active{color:#e6c9a8;font-weight:700}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}
-.pcard{background:#132845;border-radius:14px;overflow:hidden;border:1px solid #ffffff0e}.pimg{height:110px;background-size:cover;background-position:center}.blur{filter:blur(12px)}
-.chatBox{background:#132845;border:1px solid #ffffff0e;border-radius:14px;padding:12px;margin:12px}
-.msg{font-size:12px;padding:8px 10px;border-radius:12px;margin-bottom:6px;max-width:80%}.me{background:#e6c9a8;color:#0a1931;margin-left:auto}.them{background:#1a3253}
+body{font-family:Inter,sans-serif;background:#0a1931;height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1520854221256-17451ccdf07b?w=1200') center/cover;opacity:0.35}
+.overlay{position:absolute;inset:0;background:linear-gradient(to top,#0a1931 40%,rgba(10,25,49,.2))}
+.content{position:relative;z-index:2;text-align:center;padding:25px;width:100%;max-width:360px}
+.logo{width:64px;height:64px;background:linear-gradient(135deg,#d4af37,#f5e6c8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0a1931;font-size:26px;margin:0 auto 18px;box-shadow:0 0 20px rgba(212,175,55,.4)}
+h1{font-size:30px;font-weight:900;line-height:1.1;margin-bottom:8px;color:#fff}
+p{color:#bbb;font-size:13px;margin-bottom:28px}
+.btn{width:100%;padding:14px;border-radius:30px;font-weight:800;font-size:14px;border:none;cursor:pointer;margin:7px 0;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-white{background:#fff;color:#000}
+.btn-gold{background:linear-gradient(135deg,#d4af37,#f5e6c8);color:#0a1931}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+.small{font-size:10px;color:#888;margin-top:18px;line-height:1.4}
 </style>
-</head><body>
-<header><div class="logo">AX</div><div><button class="topbtn dark" onclick="openLogin()">Login</button> <button class="topbtn gold" onclick="openLogin()">Join Free</button></div></header>
-
-<div class="hero"><div class="heroText">
-<div class="badge">LUXURY • REAL • VERIFIED</div>
-<h1>Meet Your <span>Luxury Love</span></h1>
-<p>Couple pic in middle like InternationalCupid — 3 free messages then unlock</p>
-<button class="topbtn gold" style="padding:12px 24px;border-radius:28px;margin-top:10px;font-size:13px" onclick="openLogin()">View Singles Now</button>
-</div></div>
-
-<div class="cardBox" style="text-align:center">
-<div style="font-size:12px;font-weight:700;margin-bottom:6px">Why AxlynDate Is Different?</div>
-<p style="font-size:11px;opacity:.6;line-height:1.5">AX monogram = bond between two people — intertwined, elegant, forever. Navy for trust, Rose Gold for love.</p>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="content">
+<div class="logo">AX</div>
+<h1>Meet Your Luxury Love</h1>
+<p>Verified & elegant singles</p>
+<button class="btn btn-white"> <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="18"> Continue with Google</button>
+<button class="btn btn-gold" onclick="location.href='discover.html'">Sign Up</button>
+<button class="btn btn-outline" onclick="location.href='discover.html'">Login</button>
+<p class="small">By continuing, you agree to our Terms & Privacy Policy.</p>
 </div>
-
-<div class="cardBox">
-<div style="color:#e6c9a8;font-size:12px;font-weight:700;margin-bottom:8px;text-align:center">💎 Premium Plans — 3 Free Messages Then Pay:</div>
-<button class="payBtn outline" onclick="openPay()">Weekly Pass — $19 / week</button>
-<button class="payBtn popular" onclick="openPay()">Monthly Elite — $49 / month ★ Most Popular</button>
-<button class="payBtn outline" onclick="openPay()">Yearly Royal — $299 / year — 60% OFF</button>
-<div style="font-size:9px;opacity:.35;text-align:center;margin-top:10px">Secure • Cancel anytime • 3 free messages to try</div>
-</div>
-<div style="height:80px"></div>
-
-<div id="loginModal"><div class="modal">
-<div style="text-align:center;color:#e6c9a8;font-weight:800">AX — AxlynDate</div>
-<h3 style="text-align:center;margin:8px 0">Welcome</h3><p style="text-align:center;font-size:11px;opacity:.5;margin-bottom:14px">Get 3 free messages to try luxury chat</p>
-<input placeholder="Email"><input type="password" placeholder="Password">
-<button class="payBtn popular" onclick="enterApp()">Create Account — Free</button>
-<button class="payBtn outline" onclick="closeLogin()">Close</button>
-</div></div>
-
-<div id="payModal"><div class="modal">
-<div style="text-align:center;font-size:32px">🔒</div>
-<h3 style="text-align:center;margin:8px 0">You've used your 3 free messages!</h3>
-<p style="text-align:center;font-size:11px;opacity:.6;margin-bottom:14px">Sophia is waiting! Choose plan to continue unlimited:</p>
-<button class="payBtn outline" onclick="doPay('Weekly $19')">Weekly Pass — $19 / week</button>
-<button class="payBtn popular" onclick="doPay('Monthly $49')">Monthly Elite — $49 / month ★ Most Popular</button>
-<button class="payBtn outline" onclick="doPay('Yearly $299')">Yearly Royal — $299 / year — Best Value</button>
-<button class="payBtn outline" style="opacity:.5;margin-top:10px" onclick="closePay()">Maybe Later</button>
-</div></div>
-
-<div id="app">
-<div style="display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #ffffff10"><b>AxlynDate</b><button class="topbtn dark" style="font-size:10px" onclick="closeApp()">Logout</button></div>
-<div class="appTop"><button class="active" onclick="showTab('home',this)">Discover</button><button onclick="showTab('likes',this)">Likes • 3</button><button onclick="showTab('chat',this)">Messages <span id="msgCount">(0/3 free)</span></button></div>
-<div id="homeTab" class="grid">
-<div class="pcard"><div class="pimg" style="background-image:url('https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&w=400')"></div><div style="padding:8px"><b style="font-size:12px">Sophia, 24</b><div style="font-size:10px;opacity:.5">Dubai • Verified</div><button class="topbtn gold" style="width:100%;margin-top:6px;font-size:10px" onclick="goChat()">Chat 💬</button></div></div>
-<div class="pcard"><div class="pimg" style="background-image:url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=400')"></div><div style="padding:8px"><b style="font-size:12px">James, 28</b><div style="font-size:10px;opacity:.5">London • Premium</div><button class="topbtn gold" style="width:100%;margin-top:6px;font-size:10px" onclick="goChat()">Chat 💬</button></div></div>
-</div>
-<div id="likesTab" class="grid" style="display:none">
-<div class="pcard"><div class="pimg blur" style="background-image:url('https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&w=400')"></div><div style="padding:8px;text-align:center;font-size:11px">Someone liked you<button class="payBtn popular" style="font-size:10px;margin-top:6px" onclick="openPay()">Pay $19/$49/$299 to See</button></div></div>
-<div class="pcard"><div class="pimg blur" style="background-image:url('https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&w=400')"></div><div style="padding:8px;text-align:center;font-size:11px">Someone liked you<button class="payBtn popular" style="font-size:10px;margin-top:6px" onclick="openPay()">Pay to See</button></div></div>
-</div>
-<div id="chatTab" style="display:none"><div class="chatBox"><div id="chatMsgs"><div class="msg them">Sophia: Hi! 😊</div></div><div style="display:flex;gap:8px;margin-top:10px"><input id="chatInput" placeholder="Type..." style="flex:1;padding:10px;border-radius:20px;background:#1a3253;border:1px solid #ffffff15;color:#fff"><button class="topbtn gold" onclick="sendMsg()">Send</button></div><div style="font-size:10px;opacity:.5;margin-top:8px;text-align:center" id="freeInfo">3 free messages — after that choose Weekly $19 / Monthly $49 / Yearly $299</div></div></div>
-</div>
-
-<script>
-let freeMsgs=0; const maxFree=3;
-function openLogin(){document.getElementById('loginModal').classList.add('show')}
-function closeLogin(){document.getElementById('loginModal').classList.remove('show')}
-function openPay(){document.getElementById('payModal').classList.add('show')}
-function closePay(){document.getElementById('payModal').classList.remove('show')}
-function enterApp(){closeLogin();document.getElementById('app').classList.add('show')}
-function closeApp(){document.getElementById('app').classList.remove('show')}
-function goChat(){showTab('chat',document.querySelectorAll('.appTop button')[2]);}
-function showTab(id,el){
-document.getElementById('homeTab').style.display=id=='home'?'grid':'none';
-document.getElementById('likesTab').style.display=id=='likes'?'grid':'none';
-document.getElementById('chatTab').style.display=id=='chat'?'block':'none';
-document.querySelectorAll('.appTop button').forEach(b=>b.classList.remove('active')); if(el) el.classList.add('active');
-if(id=='likes') openPay();
-}
-function sendMsg(){
-let input=document.getElementById('chatInput'); if(!input.value.trim()) return;
-if(freeMsgs>=maxFree){openPay(); return;}
-let box=document.getElementById('chatMsgs'); let d=document.createElement('div'); d.className='msg me'; d.textContent=input.value; box.appendChild(d);
-input.value=''; freeMsgs++;
-document.getElementById('msgCount').textContent=`(${freeMsgs}/${maxFree} free)`;
-document.getElementById('freeInfo').textContent=freeMsgs>=maxFree?`Free limit reached — pay to continue`:`${maxFree-freeMsgs} free messages left`;
-if(freeMsgs>=maxFree){ setTimeout(()=>openPay(),900); return; }
-setTimeout(()=>{let r=document.createElement('div'); r.className='msg them'; r.textContent='Sophia: I like you 😍 tell me more'; box.appendChild(r)},700);
-}
-function doPay(plan){alert(plan+' — Replace with your Stripe/PayPal link!');}
-</script>
-</body></html>
+</body>
+</html>
