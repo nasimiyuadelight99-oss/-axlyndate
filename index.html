@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AxlynDate - Luxury Love</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AxlynDate</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#F8F3EB;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Inter',sans-serif}
-.phone{width:100%;max-width:390px;min-height:100vh;background:#FDFBF7;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:90px 32px 28px}
-.top{width:100%;display:flex;flex-direction:column;align-items:center}
-.logo{width:132px;height:132px;background:linear-gradient(135deg,#E8C99A 0%,#C9A86A 25%,#F1D9A5 50%,#C8A46B 75%,#E5C68A 100%);border-radius:28px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(201,168,106,.35), inset 0 1px 1px rgba(255,255,255,.6)}
-.logo span{font-family:'Cormorant Garamond',serif;font-size:62px;font-weight:400;color:#1A1A1A;letter-spacing:-1px;line-height:1}
-h1{font-family:'Cormorant Garamond',serif;font-size:31px;font-weight:400;color:#2B1E12;margin-top:48px;text-align:center;letter-spacing:.1px}
-.sub{font-size:15px;color:#3A2A1E;margin-top:10px;font-weight:400;opacity:.85}
-.btns{width:100%;margin-top:10px}
-.btn{width:100%;height:60px;border-radius:32px;border:none;font-size:16px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:12px;cursor:pointer;margin:16px 0;transition:.2s}
-.btn:active{transform:scale(.98)}
-.google{background:#FFFFFF;box-shadow:0 4px 18px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);color:#1A1A1A;border:1px solid rgba(0,0,0,.06)}
-.gold{background:linear-gradient(90deg,#D7B97C 0%,#E8D2A0 20%,#C9A86A 50%,#E2C48E 80%,#C9A86A 100%);color:#1A1A1A;box-shadow:0 6px 20px rgba(201,168,106,.4);font-weight:600}
+body{background:#F8F3EB;display:flex;justify-content:center;min-height:100vh}
+.phone{width:100%;max-width:390px;min-height:100vh;background:#FDFBF7;display:flex;flex-direction:column;justify-content:space-between;padding:20px 22px 18px}
+.top{text-align:center}
+.logo{width:86px;height:86px;background:linear-gradient(135deg,#E8C99A,#C9A86A,#F1D9A5,#C8A46B);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 22px rgba(201,168,106,.35)}
+.logo span{font-family:'Cormorant Garamond',serif;font-size:40px;color:#1A1A1A}
+h1{font-family:'Cormorant Garamond',serif;font-size:27px;color:#2B1E12;margin-top:16px}
+.sub{font-size:12px;color:#7A6A58;margin-top:4px}
+.hero{width:100%;margin:18px 0;border-radius:26px;overflow:hidden;position:relative;height:340px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45) 0%, transparent 55%)}
+.hero-text{position:absolute;bottom:14px;left:16px;color:#fff;z-index:2}
+.hero-text b{font-size:15px;display:block}.hero-text i{font-size:11px;opacity:.9;font-style:normal}
+.badge{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.92);color:#0A1931;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:600;z-index:2}
+.btn{width:100%;height:54px;border-radius:28px;border:none;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;margin:9px 0}
+.google{background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.08);color:#111}
+.gold{background:linear-gradient(90deg,#D7B97C,#E8D2A0,#C9A86A);color:#000}
 .outline{background:transparent;border:1.2px solid #C9A86A;color:#7A6A58}
-.foot{font-size:11px;color:#9A8A7A;text-align:center;margin-top:22px;letter-spacing:.2px}
+.foot{font-size:10px;color:#9A8A7A;text-align:center;margin-top:10px}
 </style>
 </head>
 <body>
@@ -28,13 +31,20 @@ h1{font-family:'Cormorant Garamond',serif;font-size:31px;font-weight:400;color:#
 <div class="top">
 <div class="logo"><span>AX</span></div>
 <h1>Meet Your Luxury Love</h1>
-<div class="sub">Verified & elegant singles</div>
+<div class="sub">Verified & elegant couples • 2,847 success stories</div>
 </div>
-<div class="btns">
-<button class="btn google" onclick="location.href='discover.html'">
-<img src="https://www.svgrepo.com/show/475656/google-color.svg" width="24" height="24">
-Continue with Google
-</button>
+
+<div class="hero">
+<div class="badge">💛 98% Success Rate</div>
+<img src="https://images.unsplash.com/photo-1516589177381-225540ac5c5e?w=600&h=800&fit=crop">
+<div class="hero-text">
+<b>Find Yours Today</b>
+<i>Join luxury singles in Muscat & Dubai</i>
+</div>
+</div>
+
+<div>
+<button class="btn google" onclick="location.href='discover.html'"><img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20"> Continue with Google</button>
 <button class="btn gold" onclick="location.href='discover.html'">Sign Up</button>
 <button class="btn outline" onclick="location.href='discover.html'">Login</button>
 <div class="foot">By continuing, you agree to our Terms & Privacy Policy</div>
