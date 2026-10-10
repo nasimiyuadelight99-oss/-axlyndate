@@ -6,36 +6,30 @@
 <title>AxlynDate</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;background:#000;font-family:system-ui,-apple-system;overflow:hidden}
+html,body{width:100%;height:100%;background:#000;font-family:system-ui;overflow:hidden}
 .hero{position:relative;width:100%;height:100vh;height:100dvh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:1}
 .overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.08) 38%,rgba(0,0,0,.78) 72%,rgba(0,0,0,.92) 100%)}
-.top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap;padding:calc(12px + env(safe-area-inset-top)) 16px 12px 16px;color:#fff}
-.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;flex-shrink:0}
-.logo{width:30px;height:30px;background:linear-gradient(135deg,#F1D9A5,#C9A86A);border-radius:7px;display:grid;place-items:center;color:#000;font-weight:900;font-size:12px}
-.badge{flex-shrink:0;white-space:nowrap;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);padding:6px 12px;border-radius:20px;font-size:10.5px;font-weight:600}
+.top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(12px + env(safe-area-inset-top)) 16px 12px;color:#fff}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;flex-shrink:0}.logo{width:30px;height:30px;background:linear-gradient(135deg,#F1D9A5,#C9A86A);border-radius:7px;display:grid;place-items:center;color:#000;font-weight:900}
+.badge{flex-shrink:0;white-space:nowrap;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);padding:6px 12px;border-radius:20px;font-size:10.5px}
 .bottom{position:relative;z-index:3;padding:14px 16px calc(18px + env(safe-area-inset-bottom))}
-.kicker{color:#E8C99A;font-size:10px;letter-spacing:1.8px;font-weight:700;margin-bottom:8px}
-.bottom h1{color:#fff;font-size:29px;line-height:1.08;font-weight:800;text-shadow:0 2px 12px rgba(0,0,0,.6)}
-.sub{color:rgba(255,255,255,.88);font-size:12.5px;margin-top:8px;margin-bottom:14px;line-height:1.35}
-.btn{width:100%;height:44px;border-radius:24px;border:none;font-weight:800;font-size:13px;cursor:pointer;margin-top:0}
-.btn + .btn{margin-top:10px}
+.kicker{color:#E8C99A;font-size:10px;letter-spacing:1.8px;font-weight:700;margin-bottom:8px}.bottom h1{color:#fff;font-size:29px;line-height:1.08;font-weight:800}
+.sub{color:rgba(255,255,255,.88);font-size:12.5px;margin:8px 0 14px;line-height:1.35}
+.btn{width:100%;height:44px;border-radius:24px;border:none;font-weight:800;font-size:13px}.btn+.btn{margin-top:10px}
 </style>
 </head>
 <body>
 <div class="hero">
-<img src="hero.jpg?v=18" alt="Luxury">
+<img src="hero.jpg?v=19" alt="Luxury">
 <div class="overlay"></div>
-<div class="top">
-<div class="brand"><div class="logo">AX</div> axlyndate</div>
-<div class="badge">2,847 couples matched</div>
-</div>
+<div class="top"><div class="brand"><div class="logo">AX</div> axlyndate</div><div class="badge">2,847 couples matched</div></div>
 <div class="bottom">
 <div class="kicker">✓ VERIFIED • ELEGANT • REAL CONNECTIONS</div>
 <h1>Meet Your<br>Luxury Love</h1>
 <div class="sub">Where ambitious minds meet elegant hearts</div>
-<button class="btn" style="background:#fff;color:#111">Continue with Google</button>
-<button class="btn" style="background:linear-gradient(90deg,#E8C99A,#F1D9A5,#C9A86A);color:#000">Find Your Match →</button>
+<button class="btn" style="background:#fff">Continue with Google</button>
+<button class="btn" style="background:linear-gradient(90deg,#E8C99A,#C9A86A)">Find Your Match →</button>
 <button class="btn" style="background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.65)">Login</button>
 </div>
 </div>
