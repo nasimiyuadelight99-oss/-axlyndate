@@ -2,54 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AxlynDate</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<title>AxlynDate - Luxury Love</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@500;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#FDFBF7;display:flex;justify-content:center}
-.phone{width:100%;max-width:390px;min-height:100vh;background:#FDFBF7;display:flex;flex-direction:column;padding:24px 22px 18px}
-.top{text-align:center}
-.logo{width:78px;height:78px;background:linear-gradient(135deg,#E8C99A,#C9A86A,#F1D9A5,#C8A46B);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto}
-.logo span{font-family:'Cormorant Garamond',serif;font-size:36px;color:#1A1A1A}
-h1{font-family:'Cormorant Garamond',serif;font-size:26px;color:#2B1E12;margin-top:14px}
-.sub{font-size:11px;color:#7A6A58;margin-top:4px}
-.hero{width:100%;border-radius:26px;overflow:hidden;position:relative;height:380px;box-shadow:0 12px 30px rgba(0,0,0,.15);background:#111;margin:20px 0 auto}
-.hero img{width:100%;height:100%;object-fit:cover}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 60%)}
-.hero-text{position:absolute;bottom:16px;left:18px;color:#fff;z-index:2}
-.hero-text b{font-size:16px;display:block}.hero-text i{font-size:12px;opacity:.95;font-style:normal;margin-top:2px;display:block}
-.badge{position:absolute;top:14px;right:14px;background:#fff;color:#111;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;z-index:2}
-.btns{margin-top:28px}
-.btn{width:100%;height:52px;border-radius:28px;border:none;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;margin:10px 0}
-.google{background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.08);color:#111;border:1px solid #eee}
-.gold{background:linear-gradient(90deg,#D7B97C,#E8D2A0,#C9A86A);color:#000}
-.outline{background:transparent;border:1.2px solid #C9A86A;color:#7A6A58}
-.foot{font-size:10px;color:#9A8A7A;text-align:center;margin-top:10px}
+body{font-family:'Inter',sans-serif;background:#000}
+.hero{position:relative;width:100%;height:100vh;min-height:700px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.overlay{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 75%, rgba(0,0,0,.85) 100%)}
+.top-bar{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:18px 20px}
+.logo{display:flex;align-items:center;gap:8px;color:#fff;font-weight:700}
+.logo-box{width:38px;height:38px;background:linear-gradient(135deg,#E8C99A,#C9A86A);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#000;font-family:'Cormorant Garamond',serif;font-size:20px}
+.badge{position:absolute;top:75px;right:16px;background:rgba(255,255,255,.95);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;z-index:3}
+.content{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:24px 20px 18px;color:#fff}
+.content h2{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:2px;opacity:.9;font-weight:600}
+.content h1{font-size:34px;line-height:1.05;font-weight:800;margin:10px 0 12px;max-width:300px}
+.content p{font-size:14px;opacity:.9;line-height:1.4;max-width:280px;margin-bottom:20px}
+.btns{display:flex;flex-direction:column;gap:10px}
+.btn{width:100%;height:54px;border-radius:28px;border:none;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.white{background:#fff;color:#111}
+.gold{background:linear-gradient(90deg,#D7B97C,#F1D9A5,#C9A86A);color:#000}
+.outline{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(8px)}
+.foot{font-size:9px;opacity:.6;text-align:center;margin-top:10px}
+@media(min-width:500px){
+.hero{max-width:420px;margin:0 auto}
+}
 </style>
 </head>
 <body>
-<div class="phone">
-<div class="top">
-<div class="logo"><span>AX</span></div>
-<h1>Meet Your Luxury Love</h1>
-<div class="sub">Verified & elegant • 2,847 success stories</div>
+<div class="hero">
+<!-- BIG CLOSE-UP HAPPY - LIKE YOUR EXAMPLE -->
+<img src="https://images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Happy woman finding love">
+
+<div class="overlay"></div>
+
+<div class="top-bar">
+<div class="logo"><div class="logo-box">AX</div> axlyndate</div>
 </div>
 
-<div class="hero">
-<div class="badge">💛 98% Success Rate</div>
-<!-- 100% SAFE - HAPPY CLOTHED COUPLE IN SUIT & DRESS -->
-<img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Couple">
-<div class="hero-text">
-<b>Find Yours Today</b>
-<i>Join verified singles worldwide</i>
-</div>
-</div>
+<div class="badge">💛 2,847 couples matched</div>
+
+<div class="content">
+<h2>VERIFIED & ELEGANT</h2>
+<h1>Meet Your Luxury Love</h1>
+<p>Real connections with verified singles who get your lifestyle</p>
 
 <div class="btns">
-<button class="btn google" onclick="location.href='discover.html'"><img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20"> Continue with Google</button>
-<button class="btn gold" onclick="location.href='discover.html'">Sign Up</button>
+<button class="btn white" onclick="location.href='discover.html'"><img src="https://www.svgrepo.com/show/475656/google-color.svg" width="18"> Continue with Google</button>
+<button class="btn gold" onclick="location.href='discover.html'">Find Your Match →</button>
 <button class="btn outline" onclick="location.href='discover.html'">Login</button>
-<div class="foot">By continuing, you agree to our Terms & Privacy Policy</div>
+<div class="foot">By continuing, you agree to Terms & Privacy</div>
+</div>
 </div>
 </div>
 </body>
